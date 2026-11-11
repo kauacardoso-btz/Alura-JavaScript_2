@@ -1,0 +1,17 @@
+const alunos = ['João', 'Ana', 'Caio', 'Lara']
+const medias = [10, 6.5, 8, 7.5]
+
+const lista = [alunos, medias]
+
+function exibeNomeNota(aluno) {
+    if (lista[0].includes(aluno)) {
+        const indice = lista[0].indexOf(aluno)
+        const mediaAluno = lista[1][indice]
+        console.log(`O nome do aluno é: ${aluno}. Sua média é: ${mediaAluno}`);
+    } else {
+        console.log('Estudante não existe na lista!');
+    }
+}
+
+exibeNomeNota('João')
+exibeNomeNota('Kauã')
